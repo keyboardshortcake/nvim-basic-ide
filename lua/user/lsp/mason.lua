@@ -7,6 +7,7 @@ local servers = {
 	"bashls",
 	"jsonls",
 	"yamlls",
+  "eslint", -- added new eslint server, hopefully
 }
 
 local settings = {

@@ -94,12 +94,27 @@ return packer.startup(function(use)
   }
 
   -- Git
-  use { "lewis6991/gitsigns.nvim", commit = "f98c85e7c3d65a51f45863a34feb4849c82f240f" }
+  -- use { "lewis6991/gitsigns.nvim", commit = "f98c85e7c3d65a51f45863a34feb4849c82f240f" }
 
   -- DAP
   use { "mfussenegger/nvim-dap", commit = "6b12294a57001d994022df8acbe2ef7327d30587" }
   use { "rcarriga/nvim-dap-ui", commit = "1cd4764221c91686dcf4d6b62d7a7b2d112e0b13" }
   use { "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" }
+
+  -- The plugins below were added by cake
+  -- use 'theHamsta/nvim-dap-virtual-text'  -- I forget what this even does, probably didn't set it up correctly. I guess I don't need it if I'm using lsp-lines?
+  use "folke/trouble.nvim" -- I've got a shortcut setup for this <leader>xx but I guess I don't need it if I'm using lsp-lines below
+  -- use({ -- this lsp-lines thing comes from  https://www.reddit.com/r/neovim/comments/w5h9tl/lsp_linesnvim_v2_is_out/
+  --   "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+  --   config = function()
+  --     require("lsp_lines").setup()
+  --   end,
+  -- })
+  use 'folke/lsp-colors.nvim'
+  -- trying to get fzf setup because whatever telescope is using by default is super slow
+  -- use { 'junegunn/fzf'}
+  -- use { 'junegunn/fzf.vim'}
+  -- use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

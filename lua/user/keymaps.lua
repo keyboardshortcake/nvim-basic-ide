@@ -54,12 +54,16 @@ keymap("v", ">", ">gv", opts)
 
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>k", ":NvimTreeFocus<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
+
+-- ToggleTerminal
+keymap("n", "<leader>tt", ":ToggleTerm<CR>", opts)
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
@@ -81,3 +85,12 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- Lsp
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+
+-- go to previous open file (also called the 'alternate-file')
+keymap("n", "<leader>j", "<C-^>", opts)
+
+-- Trouble -- added by cake
+keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opts)
+
+-- Normal vim shortcuts added by cake
+keymap("n", "<leader>q", "<cmd>:Bdelete<cr>", opts)

@@ -20,3 +20,6 @@ require "user.indentline"
 require "user.alpha"
 require "user.lsp"
 require "user.dap"
+require "user.lsp-colors" -- added by cake
+-- require "user.nvim-dap-virtual-text" -- added by cake
+-- require "user.fzf-native"
