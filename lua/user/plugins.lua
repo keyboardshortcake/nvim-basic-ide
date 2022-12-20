@@ -94,7 +94,7 @@ return packer.startup(function(use)
   }
 
   -- Git
-  -- use { "lewis6991/gitsigns.nvim", commit = "f98c85e7c3d65a51f45863a34feb4849c82f240f" }
+  use { "lewis6991/gitsigns.nvim", commit = "f98c85e7c3d65a51f45863a34feb4849c82f240f" }
 
   -- DAP
   use { "mfussenegger/nvim-dap", commit = "6b12294a57001d994022df8acbe2ef7327d30587" }
@@ -102,6 +102,8 @@ return packer.startup(function(use)
   use { "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" }
 
   -- The plugins below were added by cake
+  -- this is cool because it puts git blame off to the side of any given line. Toggle it with <space>GB as I've set in the keymaps file
+  use "f-person/git-blame.nvim" 
   -- use 'theHamsta/nvim-dap-virtual-text'  -- I forget what this even does, probably didn't set it up correctly. I guess I don't need it if I'm using lsp-lines?
   use "folke/trouble.nvim" -- I've got a shortcut setup for this <leader>xx but I guess I don't need it if I'm using lsp-lines below
   -- use({ -- this lsp-lines thing comes from  https://www.reddit.com/r/neovim/comments/w5h9tl/lsp_linesnvim_v2_is_out/
