@@ -102,6 +102,32 @@ return packer.startup(function(use)
   use { "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" }
 
   -- The plugins below were added by cake
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+        keywords = {
+          FIX = {
+            icon = " ", -- icon used for the sign, and in search results
+            color = "error", -- can be a hex color, or a named color (see below)
+            alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
+            -- signs = false, -- configure signs for some keywords individually
+          },
+          Question = { icon = " ", color = "info" },
+          Answer = { icon = " ", color = "warning" },
+          WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
+          PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+          NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+          TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+        }
+      }
+    end
+  }
+  use 'sam4llis/nvim-lua-gf' -- trying to figure out how to follow links, will this work?
   -- this is cool because it puts git blame off to the side of any given line. Toggle it with <space>GB as I've set in the keymaps file
   use "f-person/git-blame.nvim" 
   -- use 'theHamsta/nvim-dap-virtual-text'  -- I forget what this even does, probably didn't set it up correctly. I guess I don't need it if I'm using lsp-lines?

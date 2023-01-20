@@ -4,6 +4,16 @@ if not status_ok then
 end
 
 indent_blankline.setup {
+  -- char = "",
+  -- char_highlight_list = {
+  --     "IndentBlanklineIndent1",
+  --     "IndentBlanklineIndent2",
+  -- },
+  space_char_highlight_list = {
+      "IndentBlanklineIndent1",
+      "IndentBlanklineIndent2",
+  },
+  -- show_trailing_blankline_indent = false,
   char = "▏",
   show_trailing_blankline_indent = false,
   show_first_indent_level = true,

@@ -8,6 +8,7 @@ local servers = {
 	"jsonls",
 	"yamlls",
   "eslint", -- added new eslint server, hopefully
+  "angularls", -- hopefully added angular server? yikes I don't know what hte correct name is
 }
 
 local settings = {

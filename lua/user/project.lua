@@ -8,7 +8,8 @@ project.setup({
 	detection_methods = { "pattern" },
 
 	-- patterns used to detect root dir, when **"pattern"** is in detection_methods
-	patterns = { ".git", "Makefile", "package.json" },
+  -- added by cake. added tsconfig for work angualr projects, some of them at least
+	patterns = { ".git", "Makefile", "package.json" , "tsconfig.app.json"}, 
 })
 
 local tele_status_ok, telescope = pcall(require, "telescope")
