@@ -103,6 +103,12 @@ return packer.startup(function(use)
 
   -- The plugins below were added by cake
   use {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end
+  }
+  use {
     "folke/todo-comments.nvim",
     requires = "nvim-lua/plenary.nvim",
     config = function()
@@ -139,6 +145,13 @@ return packer.startup(function(use)
   --   end,
   -- })
   use 'folke/lsp-colors.nvim'
+  use "mattn/emmet-vim"
+  -- this herrington and maxmellon parts are so that tsx files will format correctly. 
+  -- https://www.reddit.com/r/neovim/comments/wrse9i/incorrect_indentation_on_jsxtsxreact_files/
+  -- https://github.com/MaxMEllon/vim-jsx-pretty
+  use 'HerringtonDarkholme/yats.vim'
+-- " or Plug 'leafgarland/typescript-vim'
+  use 'maxmellon/vim-jsx-pretty'
   -- trying to get fzf setup because whatever telescope is using by default is super slow
   -- use { 'junegunn/fzf'}
   -- use { 'junegunn/fzf.vim'}
